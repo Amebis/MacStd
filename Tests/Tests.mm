@@ -4,8 +4,8 @@
 */
 
 #import <XCTest/XCTest.h>
-#include "../include/MacStd/dyld.hpp"
-#include "../include/MacStd/unistd.hpp"
+#include <MacStd/dyld.hpp>
+#include <MacStd/unistd.hpp>
 
 @interface Tests : XCTestCase
 @end
