@@ -5,6 +5,7 @@
 
 #import <XCTest/XCTest.h>
 #include "../include/MacStd/dyld.hpp"
+#include "../include/MacStd/unistd.hpp"
 
 @interface Tests : XCTestCase
 @end
@@ -22,6 +23,11 @@
 - (void)test_NSGetExecutablePath {
 	std::string path;
 	XCTAssert(_NSGetExecutablePath(path) == 0);
+}
+
+- (void)test_getcwd {
+	std::string path;
+	XCTAssert(getcwd(path));
 }
 
 - (void)testPerformanceExample {
