@@ -56,16 +56,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F4AE3B6A2AB43EB600464926 = {
+		F4213D2D2ABB14F200F72674 /* MacStd */ = {
 			isa = PBXGroup;
 			children = (
 				F4AE3B7F2AB440A000464926 /* common.hpp */,
 				F4AE3B7E2AB440A000464926 /* dyld.hpp */,
+				F439D28D2ABA7DCC00B92CAE /* unistd.hpp */,
+			);
+			name = MacStd;
+			sourceTree = "<group>";
+		};
+		F4AE3B6A2AB43EB600464926 = {
+			isa = PBXGroup;
+			children = (
+				F4213D2D2ABB14F200F72674 /* MacStd */,
 				F4AE3BCE2AB4561A00464926 /* pch.cpp */,
 				F4AE3BCF2AB4561A00464926 /* pch.hpp */,
 				F4AE3B742AB43EB600464926 /* Products */,
 				F4AE3BA02AB44AC400464926 /* Tests */,
-				F439D28D2ABA7DCC00B92CAE /* unistd.hpp */,
 			);
 			sourceTree = "<group>";
 		};
