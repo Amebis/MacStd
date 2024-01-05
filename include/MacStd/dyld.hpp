@@ -24,10 +24,10 @@ inline int _NSGetExecutablePath(std::string& path)
 		return 0;
 	}
 	if (result == -1) {
-		std::unique_ptr<char[]> heap_buffer(new char[capacity]);
-		result = _NSGetExecutablePath(heap_buffer.get(), &capacity);
+		path.resize(capacity - 1);
+		result = _NSGetExecutablePath(&path[0], &capacity);
 		if (result == 0) {
-			path = heap_buffer.get();
+			path.resize(strnlen(path.data(), path.size()));
 			return 0;
 		}
 	}
