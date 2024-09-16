@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MacStd: include/MacStd/dyld.hpp Source File</title>
+<title>MacStd: include/MacStd/Foundation.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,7 +89,7 @@ $(function(){ initResizable(false); });
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">dyld.hpp</div></div>
+  <div class="headertitle"><div class="title">Foundation.hpp</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
@@ -100,28 +100,31 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;common.hpp&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;mach-o/dyld.h&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">inline</span> <span class="keywordtype">int</span> _NSGetExecutablePath(std::string&amp; path)</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">char</span> stack_buffer[MACSTD_STACK_BUFFER_BYTES];</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    uint32_t capacity = MACSTD_STACK_BUFFER_BYTES;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">int</span> result = _NSGetExecutablePath(stack_buffer, &amp;capacity);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordflow">if</span> (result == 0) {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        path = stack_buffer;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">if</span> (result == -1) {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        path.resize(capacity - 1);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        result = _NSGetExecutablePath(&amp;path[0], &amp;capacity);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">if</span> (result == 0) {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            path.resize(strnlen(path.data(), path.size()));</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span>macstd {</div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structmacstd_1_1_c_f_release__delete.html">   16</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structmacstd_1_1_c_f_release__delete.html">CFRelease_delete</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structmacstd_1_1_c_f_release__delete.html#a6aa1065ba889687f0e8798deb57ba3cc">   21</a></span>        <a class="code hl_function" href="structmacstd_1_1_c_f_release__delete.html#a6aa1065ba889687f0e8798deb57ba3cc">CFRelease_delete</a>() noexcept {}</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> _T&gt;</div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structmacstd_1_1_c_f_release__delete.html#ada4a1d4eab1b2f91d655335b64cc2726">   29</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="structmacstd_1_1_c_f_release__delete.html#ada4a1d4eab1b2f91d655335b64cc2726">operator()</a>(_T *_Ptr)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            CFRelease(_Ptr);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        }</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    };</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">using </span>CFType = std::unique_ptr&lt;T, CFRelease_delete&gt;;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+<div class="ttc" id="astructmacstd_1_1_c_f_release__delete_html"><div class="ttname"><a href="structmacstd_1_1_c_f_release__delete.html">macstd::CFRelease_delete</a></div><div class="ttdoc">Deleter for unique_ptr using CFRelease.</div><div class="ttdef"><b>Definition</b> Foundation.hpp:17</div></div>
+<div class="ttc" id="astructmacstd_1_1_c_f_release__delete_html_a6aa1065ba889687f0e8798deb57ba3cc"><div class="ttname"><a href="structmacstd_1_1_c_f_release__delete.html#a6aa1065ba889687f0e8798deb57ba3cc">macstd::CFRelease_delete::CFRelease_delete</a></div><div class="ttdeci">CFRelease_delete() noexcept</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition</b> Foundation.hpp:21</div></div>
+<div class="ttc" id="astructmacstd_1_1_c_f_release__delete_html_ada4a1d4eab1b2f91d655335b64cc2726"><div class="ttname"><a href="structmacstd_1_1_c_f_release__delete.html#ada4a1d4eab1b2f91d655335b64cc2726">macstd::CFRelease_delete::operator()</a></div><div class="ttdeci">void operator()(_T *_Ptr) const</div><div class="ttdoc">Delete a pointer.</div><div class="ttdef"><b>Definition</b> Foundation.hpp:29</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

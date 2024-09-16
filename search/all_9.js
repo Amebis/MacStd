@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['what_20macstd_20is_20not_0',['What MacStd Is Not',['../index.html#autotoc_md5',1,'']]]
+  ['templates_0',['Functions and Templates',['../index.html#autotoc_md3',1,'']]],
+  ['tests_1',['Tests',['../interface_tests.html',1,'']]]
 ];

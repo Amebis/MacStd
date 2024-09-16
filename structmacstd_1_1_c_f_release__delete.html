@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MacStd: include/MacStd Directory Reference</title>
+<title>MacStd: macstd::CFRelease_delete Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,26 +84,70 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_49bef833487b2e4ec885e49af66a06b7.html">MacStd</a></li>  </ul>
+<li class="navelem"><b>macstd</b></li><li class="navelem"><a class="el" href="structmacstd_1_1_c_f_release__delete.html">CFRelease_delete</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">MacStd Directory Reference</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="structmacstd_1_1_c_f_release__delete-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">macstd::CFRelease_delete Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Deleter for unique_ptr using CFRelease.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_foundation_8hpp_source.html">MacStd/Foundation.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
-Files</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a href="common_8hpp_source.html"><span class="icondoc"></span></a>&#160;</td><td class="memItemRight" valign="bottom"><b>common.hpp</b></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a href="dyld_8hpp_source.html"><span class="icondoc"></span></a>&#160;</td><td class="memItemRight" valign="bottom"><b>dyld.hpp</b></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a href="_foundation_8hpp_source.html"><span class="icondoc"></span></a>&#160;</td><td class="memItemRight" valign="bottom"><b>Foundation.hpp</b></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a href="unistd_8hpp_source.html"><span class="icondoc"></span></a>&#160;</td><td class="memItemRight" valign="bottom"><b>unistd.hpp</b></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a6aa1065ba889687f0e8798deb57ba3cc" id="r_a6aa1065ba889687f0e8798deb57ba3cc"><td class="memItemLeft" align="right" valign="top"><a id="a6aa1065ba889687f0e8798deb57ba3cc" name="a6aa1065ba889687f0e8798deb57ba3cc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CFRelease_delete</b> () noexcept</td></tr>
+<tr class="memdesc:a6aa1065ba889687f0e8798deb57ba3cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
+<tr class="separator:a6aa1065ba889687f0e8798deb57ba3cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada4a1d4eab1b2f91d655335b64cc2726" id="r_ada4a1d4eab1b2f91d655335b64cc2726"><td class="memTemplParams" colspan="2">template&lt;class _T &gt; </td></tr>
+<tr class="memitem:ada4a1d4eab1b2f91d655335b64cc2726"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ada4a1d4eab1b2f91d655335b64cc2726">operator()</a> (_T *_Ptr) const</td></tr>
+<tr class="memdesc:ada4a1d4eab1b2f91d655335b64cc2726"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a pointer.  <br /></td></tr>
+<tr class="separator:ada4a1d4eab1b2f91d655335b64cc2726"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Deleter for unique_ptr using CFRelease. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ada4a1d4eab1b2f91d655335b64cc2726" name="ada4a1d4eab1b2f91d655335b64cc2726"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada4a1d4eab1b2f91d655335b64cc2726">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class _T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void macstd::CFRelease_delete::operator() </td>
+          <td>(</td>
+          <td class="paramtype">_T *</td>          <td class="paramname"><span class="paramname"><em>_Ptr</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Delete a pointer. </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://developer.apple.com/documentation/corefoundation/1521153-cfrelease">CFRelease function</a> </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>include/MacStd/<a class="el" href="_foundation_8hpp_source.html">Foundation.hpp</a></li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
