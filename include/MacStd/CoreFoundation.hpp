@@ -6,7 +6,7 @@
 #pragma once
 
 #include "common.hpp"
-#import <Foundation/Foundation.h>
+#include <CoreFoundation/CoreFoundation.h>
 #include <memory>
 
 namespace macstd {
