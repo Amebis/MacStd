@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['cfrelease_5fdelete_0',['CFRelease_delete',['../structmacstd_1_1_c_f_release__delete.html#a6aa1065ba889687f0e8798deb57ba3cc',1,'macstd::CFRelease_delete']]]
+  ['attach_0',['attach',['../classmacstd_1_1handle.html#a69d07a5c3334ce61998880b0d620c6fd',1,'macstd::handle']]],
+  ['attach_5fduplicated_1',['attach_duplicated',['../classmacstd_1_1dplhandle.html#acf0b725b54793b240572c0fe86537f3c',1,'macstd::dplhandle']]]
 ];

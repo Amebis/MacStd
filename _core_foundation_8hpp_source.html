@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MacStd: include/MacStd/Foundation.hpp Source File</title>
+<title>MacStd: include/MacStd/CoreFoundation.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,7 +89,7 @@ $(function(){ initResizable(false); });
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">Foundation.hpp</div></div>
+  <div class="headertitle"><div class="title">CoreFoundation.hpp</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
@@ -100,7 +100,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;common.hpp&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;CoreFoundation/CoreFoundation.h&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span>macstd {</div>
@@ -122,13 +122,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">using </span>CFType = std::unique_ptr&lt;T, CFRelease_delete&gt;;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
-<div class="ttc" id="astructmacstd_1_1_c_f_release__delete_html"><div class="ttname"><a href="structmacstd_1_1_c_f_release__delete.html">macstd::CFRelease_delete</a></div><div class="ttdoc">Deleter for unique_ptr using CFRelease.</div><div class="ttdef"><b>Definition</b> Foundation.hpp:17</div></div>
-<div class="ttc" id="astructmacstd_1_1_c_f_release__delete_html_a6aa1065ba889687f0e8798deb57ba3cc"><div class="ttname"><a href="structmacstd_1_1_c_f_release__delete.html#a6aa1065ba889687f0e8798deb57ba3cc">macstd::CFRelease_delete::CFRelease_delete</a></div><div class="ttdeci">CFRelease_delete() noexcept</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition</b> Foundation.hpp:21</div></div>
-<div class="ttc" id="astructmacstd_1_1_c_f_release__delete_html_ada4a1d4eab1b2f91d655335b64cc2726"><div class="ttname"><a href="structmacstd_1_1_c_f_release__delete.html#ada4a1d4eab1b2f91d655335b64cc2726">macstd::CFRelease_delete::operator()</a></div><div class="ttdeci">void operator()(_T *_Ptr) const</div><div class="ttdoc">Delete a pointer.</div><div class="ttdef"><b>Definition</b> Foundation.hpp:29</div></div>
+<div class="ttc" id="astructmacstd_1_1_c_f_release__delete_html"><div class="ttname"><a href="structmacstd_1_1_c_f_release__delete.html">macstd::CFRelease_delete</a></div><div class="ttdoc">Deleter for unique_ptr using CFRelease.</div><div class="ttdef"><b>Definition</b> CoreFoundation.hpp:17</div></div>
+<div class="ttc" id="astructmacstd_1_1_c_f_release__delete_html_a6aa1065ba889687f0e8798deb57ba3cc"><div class="ttname"><a href="structmacstd_1_1_c_f_release__delete.html#a6aa1065ba889687f0e8798deb57ba3cc">macstd::CFRelease_delete::CFRelease_delete</a></div><div class="ttdeci">CFRelease_delete() noexcept</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition</b> CoreFoundation.hpp:21</div></div>
+<div class="ttc" id="astructmacstd_1_1_c_f_release__delete_html_ada4a1d4eab1b2f91d655335b64cc2726"><div class="ttname"><a href="structmacstd_1_1_c_f_release__delete.html#ada4a1d4eab1b2f91d655335b64cc2726">macstd::CFRelease_delete::operator()</a></div><div class="ttdeci">void operator()(_T *_Ptr) const</div><div class="ttdoc">Delete a pointer.</div><div class="ttdef"><b>Definition</b> CoreFoundation.hpp:29</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 27 2024 16:32:47 for MacStd by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+Generated on Tue Oct 1 2024 11:48:46 for MacStd by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
 </div><!-- doc-content -->
 </body>
